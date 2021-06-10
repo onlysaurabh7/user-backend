@@ -1,6 +1,6 @@
 const userHandlers = require('../controllers/userController');
 const express = require("express")
-var router = express.Router();
+const router = express.Router();
 const AuthMiddleware=require("../middleware/auth")
 
 router.post("/profile",AuthMiddleware.VerifyToken, userHandlers.profile);
